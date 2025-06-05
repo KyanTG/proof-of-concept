@@ -15,8 +15,10 @@ app.use(express.urlencoded({extended: true}))
 // or app.get('/catalogus') when there is a homepage
 app.get('/', async function (request, response) { 
 
+const catalogusPage = await fetch('https://efm-student-case-proxy-api.vercel.app/overview')
+const catalogusPageJSON = await catalogusPage.json()
 
-response.render('catalogus.liquid')
+response.render('catalogus.liquid', {data: catalogusPageJSON.data})
 })
 
 
