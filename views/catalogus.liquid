@@ -1,3 +1,5 @@
+{% render 'partials/head.liquid' %}
+
 {%  render 'partials/header.liquid' %} 
 
 <section class="filter-navigation">
@@ -14,10 +16,24 @@
         <option value="plaats">plaats</option>
     </select>
 
-    <button class="jaar">jaar</button>
+    <button class="year">jaar</button>
         <input type="range">
     
     <select class="digital">
         <option value="gedititaliseerde publicaties">gedititaliseerde publicaties</option>
     </select>
+</section>
+
+<section class="book-list">
+
+    {% for data in algemeen %}
+        <article class="book-info">
+            <h2>{{ data.title }}</h2>
+            <img src="{{ data.asset.small }}" alt="book-cover" loading="lazy">
+            <p>{{ data.metadata.2.value.0 }}</p>
+            <p>{{ data.metadata.4.value }}</p>
+            <p>{{ data.metadata.3.value }}</p>
+        </article>
+    {% endfor %}
+
 </section>
