@@ -1,0 +1,26 @@
+:root {
+
+    /* colors  */
+
+    --color-main: #002646;
+    --color-secondary: #C4A356;
+    --color-extra: #D7D1C5;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* fonts */
+
+    --main-font: "FontAncient";
+    --font-size-xxl: 32px;
+    --font-size-xl: 28px;
+    --font-size-l: 20px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+    --font-size-xs: 12px;
+
+    @font-face {
+        font-family: "FontAncient";
+        font-weight: normal;
+        src: url("/assets/pierce-jameson.tff") format("ttf");
+    }
+}
