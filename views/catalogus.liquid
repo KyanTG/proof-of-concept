@@ -2,7 +2,8 @@
 
 {%  render 'partials/header.liquid' %} 
 
-{% comment %} <section class="filter-navigation">
+<section class="content">
+<section class="filter-navigation">
 
     <div class="search-bar">
         <input type="search" placeholder="zoek hier..." minlength="1400" maxlength="2100">
@@ -24,9 +25,9 @@
     <select class="digital">
         <option value="gedititaliseerde publicaties">gedititaliseerde publicaties</option>
     </select>
-</section> {% endcomment %}
+</section>
 
-{% comment %} <section class="book-list">
+<section class="book-list">
 
     {% for data in algemeen %}
         <article class="book-info">
@@ -38,6 +39,7 @@
             <a class="book-details">boek bekijken</a>
         </article>
     {% endfor %}
-</section> {% endcomment %}
+</section>
+</section>
 
 {% render 'partials/footer.liquid' %}
