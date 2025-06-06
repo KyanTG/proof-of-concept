@@ -4,6 +4,54 @@
     box-sizing: border-box;
 }
 
+.filter-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--color-main);
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    color: var(--color-main);
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    margin-left: 12px;
+    height: 25px;
+}
+
+select, .year {
+    background: var(--color-main);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    padding-inline: 5px;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 7px;
+    padding-right: 3px;
+}
+
+
 .book-list {
     display: flex;
     align-items: flex-start;

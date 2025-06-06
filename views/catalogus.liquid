@@ -1,12 +1,14 @@
 {% render 'partials/head.liquid' %}
 
-{% comment %} {%  render 'partials/header.liquid' %}  {% endcomment %}
+{%  render 'partials/header.liquid' %} 
 
-<section class="filter-navigation">
+{% comment %} <section class="filter-navigation">
 
     <div class="search-bar">
         <input type="search" placeholder="zoek hier..." minlength="1400" maxlength="2100">
-        <img src="/assets/search.svg" alt="search-button">
+        <button>
+            <img src="/assets/search.svg" alt="search-button" height="25px">
+        </button>
     </div>
     <select class="auteur">
         <option value="auteur">auteur</option>
@@ -16,15 +18,15 @@
         <option value="plaats">plaats</option>
     </select>
 
-    <button class="year">jaar</button>
-        <input type="range">
+    <button class="year">jaar<img src="/assets/dropdown.svg" alt="dropdown" width="9,5px" height="6px"></button>
+        <input class="range-slider" type="range">
     
     <select class="digital">
         <option value="gedititaliseerde publicaties">gedititaliseerde publicaties</option>
     </select>
-</section>
+</section> {% endcomment %}
 
-<section class="book-list">
+{% comment %} <section class="book-list">
 
     {% for data in algemeen %}
         <article class="book-info">
@@ -36,6 +38,6 @@
             <a class="book-details">boek bekijken</a>
         </article>
     {% endfor %}
-</section>
+</section> {% endcomment %}
 
 {% render 'partials/footer.liquid' %}

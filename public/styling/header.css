@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    background-image: url(/assets/header-image.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 110%;
+}
+
+.upper-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-main);
+    height: 50px;
+    margin-top: 15%;
+}
+
+.page-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu {
+    background: none;
+    border: hidden;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 16px;
+}
