@@ -32,7 +32,7 @@
     {% for data in algemeen %}
         <article class="book-info">
             <h2 class="book-title">{{ data.title }}</h2>
-            <img class="book-image" src="{{ data.asset.small }}" alt="book-cover" loading="lazy" width="80px" height="120px"> 
+            <img class="book-image" src="{{ data.asset.medium }}" alt="book-cover" loading="lazy" width="80px" height="120px"> 
             <p class="book-publisher">Uitgever {{ data.metadata.2.value.0 }}</p>
             <p class="book-year">Jaar {{ data.metadata.4.value }}</p>
             <p class="book-place">Plaats {{ data.metadata.3.value }}</p>
