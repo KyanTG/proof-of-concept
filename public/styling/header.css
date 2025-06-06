@@ -17,7 +17,7 @@ header {
     justify-content: center;
     background: var(--color-main);
     height: 50px;
-    margin-top: 15%;
+    margin-top: 14%;
 }
 
 .page-logo {
@@ -40,5 +40,5 @@ header {
 }
 
 .header-nav {
-    display: flex;
+    display: none;
 }
