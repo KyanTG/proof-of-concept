@@ -11,6 +11,7 @@
     /* fonts */
 
     --main-font: "FontAncient";
+    --small-font: "FontSmall";
     --font-size-xxl: 32px;
     --font-size-xl: 28px;
     --font-size-l: 20px;
@@ -18,9 +19,16 @@
     --font-size-s: 14px;
     --font-size-xs: 12px;
 
-    @font-face {
-        font-family: "FontAncient";
-        font-weight: normal;
-        src: url("/assets/pierce-jameson.tff") format("ttf");
-    }
+}
+
+@font-face {
+    font-family: "FontAncient";
+    font-weight: normal;
+    src: url("/assets/james-font.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "FontSmall";
+    font-weight: normal;
+    src: url("/assets/goudy-font.woff2") format("woff2");
 }
