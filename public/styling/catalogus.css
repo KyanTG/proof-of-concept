@@ -40,6 +40,7 @@
     border: none;
     margin-left: 10px;
     height: 25px;
+    cursor: pointer;
 }
 
 .range-slider {
@@ -53,6 +54,7 @@ select, .year {
     border-radius: 10px;
     height: 35px;
     padding-inline: 10px;
+    cursor: pointer;
 }
 
 .year {
@@ -120,6 +122,7 @@ select, .year {
 .book-details {
     font-family: var(--small-font);
     font-size: var(--font-size-m);
+    text-decoration: none;
     grid-column: 4/5;
     grid-row: 4/5;
     background: var(--color-main);
