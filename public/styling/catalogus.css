@@ -47,7 +47,7 @@
     display: none;
 }
 
-select, .year {
+select {
     background: var(--color-main);
     color: var(--color-secondary);
     border: none;
@@ -57,20 +57,17 @@ select, .year {
     cursor: pointer;
 }
 
-.year {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-left: 7px;
-    padding-right: 3px;
-}
-
-
 .book-list {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 32px;
+
+    @media (min-width: 834px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 600px);
+        justify-content: center;
+    }
 }
 
 .book-info {

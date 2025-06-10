@@ -19,8 +19,9 @@
         <option value="plaats">plaats</option>
     </select>
 
-    <button class="year">jaar<img src="/assets/dropdown.svg" alt="dropdown" width="9,5" height="6"></button>
-        <input class="range-slider" type="range">
+    <select class="year">
+        <option value="year">jaar</option>
+    </select>
     
     <select class="digital">
         <option value="gedititaliseerde publicaties">gedititaliseerde publicaties</option>
@@ -56,6 +57,7 @@ function searchTable() {
         let bookData = row.textContent.toLocaleLowerCase(),
             searchData = search.value.toLocaleLowerCase();
 
-            row.classList.toggle('hide',bookData.indexOf(searchData) < 0); } ) }
-
+            row.classList.toggle('hide',bookData.indexOf(searchData) < 0); 
+    } 
+)};
 </script>
