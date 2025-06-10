@@ -10,10 +10,10 @@
 
     <div class="header-nav">
     <div class="header-link">
-        <button>embassy
-            <img src="/assets/dropdown.svg" alt="dropdown" width="9,5" height="6">
+        <button class="button-linksnav">embassy
+            <img src="/assets/dropdown.svg" alt="dropdown" width="12.5" height="8">
         </button>
-        <nav>
+        <nav class="header-link-navigation">
             <ul>
                 <li>
                     <a href="#">embassy</a>
@@ -41,10 +41,10 @@
     </div>
 
     <div class="header-link">
-        <button>collectie
-            <img src="/assets/dropdown.svg" alt="dropdown" width="9,5" height="6">
+        <button class="button-linksnav">collectie
+            <img src="/assets/dropdown.svg" alt="dropdown" width="12.5" height="8">
         </button>
-        <nav>
+        <nav class="header-link-navigation">
             <ul>
                 <li>
                     <a href="#">collectie</a>
@@ -69,10 +69,10 @@
     </div>
 
     <div class="header-link">
-        <button>museum
-            <img src="/assets/dropdown.svg" alt="dropdown" width="9,5" height="6">
+        <button class="button-linksnav">museum
+            <img src="/assets/dropdown.svg" alt="dropdown" width="12.5" height="8">
         </button>
-        <nav>
+        <nav class="header-link-navigation">
             <ul>
                 <li>
                     <a href="#">museum</a>
@@ -100,10 +100,10 @@
     </div>
 
     <div class="header-link">
-        <button>onderzoek
-            <img src="/assets/dropdown.svg" alt="dropdown" width="9,5" height="6">
+        <button class="button-linksnav">onderzoek
+            <img src="/assets/dropdown.svg" alt="dropdown" width="12.5" height="8">
         </button>
-        <nav>
+        <nav class="header-link-navigation">
             <ul>
                 <li>
                     <a href="#">onderzoek</a>
@@ -117,3 +117,18 @@
     </div>
     </section>
 </header>
+
+<script>
+
+let hidingNav = document.querySelectorAll(".header-link");
+
+hidingNav.forEach(element => {
+  let buttonLinks = element.querySelector(".button-linksnav");
+  let navLinks = element.querySelector(".header-link-navigation");
+
+  buttonLinks.onclick = function() {
+    navLinks.classList.toggle("show-linksnav");
+  }
+});
+
+</script>
