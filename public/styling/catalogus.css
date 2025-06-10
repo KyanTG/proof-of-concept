@@ -138,3 +138,7 @@ select, .year {
     font-family: var(--small-font);
     font-size: var(--font-size-s);
 }
+
+.book-info.hide {
+    display: none;
+}

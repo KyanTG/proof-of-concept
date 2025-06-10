@@ -6,7 +6,7 @@
 <section class="filter-navigation">
 
     <div class="search-bar">
-        <input type="search" placeholder="zoek hier..." minlength="1400" maxlength="2100">
+        <input type="search" class="search-input" placeholder="zoek hier..." minlength="1400" maxlength="2100">
         <button>
             <img src="/assets/search.svg" alt="search-button" height="25">
         </button>
@@ -43,3 +43,19 @@
 </section>
 
 {% render 'partials/footer.liquid' %}
+
+<script>
+    
+const search = document.querySelector('.search-input'),
+bookRows = document.querySelectorAll('.book-info');
+
+search.addEventListener('input', searchTable);
+
+function searchTable() {
+    bookRows.forEach( (row, i) => {
+        let bookData = row.textContent.toLocaleLowerCase(),
+            searchData = search.value.toLocaleLowerCase();
+
+            row.classList.toggle('hide',bookData.indexOf(searchData) < 0); } ) }
+
+</script>
