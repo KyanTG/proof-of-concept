@@ -116,9 +116,13 @@ select {
 .book-place {
     grid-column: 2/4;
     grid-row: 4/5;
+    margin-bottom: 12px;
 }
 
 .book-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--main-font);
     font-size: var(--font-size-xs);
     text-decoration: none;
@@ -137,6 +141,10 @@ select {
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     color: var(--color-main);
+
+    @media (min-width: 834px) {
+        font-size: var(--font-size-sm);
+    }
 }
 
 .book-info.hide {
