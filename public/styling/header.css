@@ -16,14 +16,32 @@ header {
     align-items: center;
     justify-content: center;
     background: var(--color-main);
-    height: 50px;
-    margin-top: 14%;
+    height: 55px;
+    margin-top: 10%;
+
+    @media (min-width:834px) {
+        height: 65px;
+        margin-top: 12.5%;
+    }
+
+    @media (min-width: 1280px) {
+        height: 75px;
+        margin-top: 10%;
+    }
 }
 
 .page-logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: 834px) {
+        scale: 1.14;
+    }
+
+    @media (min-width: 1280px) {
+        scale: 1.3;
+    }
 }
 
 .nav-menu {
@@ -33,11 +51,17 @@ header {
     margin-left: auto;
     margin-right: 16px;
     cursor: pointer;
+
+    @media (min-width: 834px) {
+        display: none;
+    }
 }
 
 .embassy-logo {
     margin-top: 16px;
     margin-left: 16px;
+
+    
 }
 
 .header-nav {
