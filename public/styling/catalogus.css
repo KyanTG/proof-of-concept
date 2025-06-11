@@ -68,6 +68,7 @@ select {
         display: grid;
         grid-template-columns: repeat(auto-fit, 600px);
         justify-content: center;
+        align-items: flex-start;
     }
 }
 
