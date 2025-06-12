@@ -41,22 +41,28 @@ response.render('detail.liquid', { detail: detailPageJSON, algemeen: catalogusPa
 //         const id = request.params.id; // Get the ID from the URL
 //         console.log('Received ID:', id); // Debugging: Log the received ID
 
-//         // Fetch the detail data for the specific ID
-//         const detailPage = await fetch(`https://efm-student-case-proxy-api.vercel.app/detail/${id}`);
-//         console.log('API Response Status:', detailPage.status); // Debugging: Log the API response status
+//         // Fetch the overview data
+//         const catalogusPage = await fetch('https://efm-student-case-proxy-api.vercel.app/overview');
+//         console.log('Fetching overview data...');
+//         const catalogusPageJSON = await catalogusPage.json();
+//         console.log('Overview Data:', catalogusPageJSON); // Debugging: Log the overview data
 
-//         // Check if the API response is successful
+//         // Fetch the detail data for the specific ID
+//         console.log('Fetching detail data for ID:', id);
+//         const detailPage = await fetch('https://efm-student-case-proxy-api.vercel.app/detail/' + id);
+//         console.log('Detail API Response Status:', detailPage.status); // Debugging: Log the API response status
+
 //         if (!detailPage.ok) {
-//             throw new Error(`API returned status ${detailPage.status}`);
+//             throw new Error(`Detail API returned status ${detailPage.status}`);
 //         }
 
 //         const detailPageJSON = await detailPage.json();
-//         console.log('Detail Data:', detailPageJSON); // Debugging: Log the fetched data
+//         console.log('Detail Data:', detailPageJSON); // Debugging: Log the fetched detail data
 
 //         // Render the detail page with the fetched data
-//         response.render('detail.liquid', { detail: detailPageJSON });
+//         response.render('detail.liquid', { detail: detailPageJSON, algemeen: catalogusPageJSON });
 //     } catch (error) {
-//         console.error('Error fetching detail data:', error.message); // Log the error message
+//         console.error('Error in /detail/:id route:', error.message); // Log the error message
 //         response.status(404).send('Detail not found');
 //     }
 // });

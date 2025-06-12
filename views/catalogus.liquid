@@ -37,7 +37,7 @@
             <p class="book-publisher">Uitgever {{ data.metadata.2.value.0 }}</p>
             <p class="book-year">Jaar {{ data.metadata.4.value }}</p>
             <p class="book-place">Plaats {{ data.metadata.3.value }}</p>
-            <p>debug {{ data.id }}</p>
+            {% comment %} <p>debug {{ data.id }}</p> {% endcomment %}
             <a href="/detail/{{ data.id }}" class="book-details">boek bekijken</a>        </article>
     {% endfor %}
 </section>
