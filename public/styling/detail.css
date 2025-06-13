@@ -1,0 +1,87 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.detail-nav {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 8px;
+    padding-top: 24px;
+    background-color: var(--color-main);
+    width: 70px;
+    height: 100vh;
+}
+
+.detail-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 24px;
+}
+
+.detail-nav li:nth-of-type(2) {
+    margin-top: 60px;
+}
+
+.detail-nav a {
+    font-family: var(--main-font);
+    font-size: var(--font-size-xs);
+    background: var(--color-secondary);
+    color: var(--color-main);
+    padding-bottom: 3px;
+    padding-top: 4px;
+    padding-inline: 6px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.detail-nav button {
+    border: none;
+    background: none;
+    font-family: var(--small-font);
+    font-size: var(--font-size-s);
+    color: var(--color-secondary);
+}
+
+.detail-book-info h1, .detail-book-reaction h1 {
+    font-family: var(--main-font);
+    font-size: var(--font-size-m);
+    color: var(--color-main);
+    margin-bottom: 24px;
+}
+
+.detail-book-info h2 {
+    font-family: var(--main-font);
+    font-size: var(--font-size-s);
+    color: var(--color-main);
+}
+
+.detail-book-info p, .detail-book-reaction label, .detail-book-reaction input {
+    font-family: var(--small-font);
+    font-size: var(--font-size-s);
+    color: var(--color-main);
+}
+
+.detail-book-info p {
+    margin-bottom: 8px;
+}
+
+.detail-book-reaction form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.detail-book-reaction input[type="submit"] {
+    font-family: var(--small-font);
+    font-size: var(--font-size-s);
+    background: var(--color-main);
+    border: none;
+    border-radius: 10px;
+    padding-inline: 6px;
+    padding-block: 3px;
+    color: var(--color-secondary);
+    margin-top: 8px;
+}
