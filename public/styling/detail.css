@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.detail-page {
+    position: relative;
+}
+
 .detail-nav {
     display: flex;
     justify-content: flex-start;
@@ -37,12 +41,27 @@
     text-decoration: none;
 }
 
+
 .detail-nav button {
     border: none;
     background: none;
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     color: var(--color-secondary);
+}
+
+.detail-book-info {
+    display: none;
+    transform: translateY(100%);
+}
+
+.detail-book-info-open {
+    display: block;
+    transform: translateY(0%);
+    margin-left: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
 }
 
 .detail-book-info h1, .detail-book-reaction h1 {
@@ -66,6 +85,20 @@
 
 .detail-book-info p {
     margin-bottom: 8px;
+}
+
+.detail-book-reaction {
+    display: none;
+    transform: translateY(100%);
+}
+
+.detail-book-reaction-open {
+    display: block;
+    transform: translateY(0%);
+    margin-left: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 9;
 }
 
 .detail-book-reaction form {

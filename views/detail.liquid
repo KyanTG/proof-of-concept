@@ -86,8 +86,31 @@
 
 <script>
 
-    let
+// information 
+
+const infoButton = document.querySelector(".detail-info");
+
+infoButton.addEventListener("click", openInfo);
 
 
+function openInfo() {  
+
+  const infoNav = document.querySelector(".detail-book-info");
+
+  infoNav.classList.toggle("detail-book-info-open");}
+
+
+// reaction 
+
+const ReaButton = document.querySelector(".detail-reactions");
+
+ReaButton.addEventListener("click", openRea);
+
+
+function openRea() {  
+
+  const ReaNav = document.querySelector(".detail-book-reaction");
+
+  ReaNav.classList.toggle("detail-book-reaction-open");}
 
 </script>
