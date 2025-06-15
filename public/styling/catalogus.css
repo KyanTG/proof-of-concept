@@ -132,6 +132,7 @@ select {
     grid-column: 2/4;
     grid-row: 4/5;
     margin-bottom: 12px;
+    max-width: 300px;
 }
 
 .book-details {
@@ -146,9 +147,11 @@ select {
     background: var(--color-main);
     color: var(--color-secondary);
     width: 100%;
+    max-height: 40px;
     padding-inline: 10px;
     padding-block: 5px;
     margin-right: 0;
+    margin-top: auto;
     border-radius: 10px 0px 0px 0px;
 
     @media (min-width: 834px) {
