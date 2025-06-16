@@ -138,6 +138,10 @@ header {
     flex-direction: column;
     width: 150px;
     margin-top: 15px;
+
+    @media (min-width:1280px) {
+        margin-top: 20px;
+    }
 }
 
 .header-link:nth-of-type(2) {
@@ -149,12 +153,24 @@ header {
 }
 
 .header-link-navigation {
-    visibility: hidden; 
-    opacity: 0; 
+    display: none;
 }
   
-.header-link-navigation.show-linksnav {
+.show-linksnav {
+    display: block;
     background: var(--color-main);
-    visibility: visible; 
-    opacity: 1; 
+    padding: 10px;
+}
+
+
+.show-linksnav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.header-link-navigation a {
+    color: var(--color-secondary);
+    text-decoration: none;
 }
