@@ -26,7 +26,6 @@ response.render('catalogus.liquid', { algemeen: catalogusPageJSON });
 
 app.get('/detail/:id', async function (request, response) {
     
-    try {
     const catalogusPage = await fetch('https://efm-student-case-proxy-api.vercel.app/overview');
     const catalogusPageJSON = await catalogusPage.json(); 
 
@@ -34,12 +33,7 @@ app.get('/detail/:id', async function (request, response) {
     const detailPageJSON = await detailPage.json();
 
     response.render('detail.liquid', { detail: detailPageJSON, algemeen: catalogusPageJSON });
-    }
 
-     catch (error) {
-        console.error('Error in /detail/:id route:', error.message); // Log the error message
-        response.status(404).send('Detailbook niet gevonden');
-    }
 });
 
 // app.get('/detail/:id', async function (request, response) {
