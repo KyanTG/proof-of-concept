@@ -23,34 +23,34 @@
             <p>{{ detail.title }}</p>
 
             <h2>auteur</h2>
-            <p>{{ detail.metadata.2.value }}</p>
+            <p>{% assign auteur = detail.metadata | find: "field", "auteur" %} {{ auteur.value }}</p>
 
             <h2>jaar</h2>
-            <p>{{ detail.metadata.4.value }}</p>
+            <p>{% assign jaar = detail.metadata | find: "field", "jaar" %} {{ jaar.value }}</p>
 
             <h2>uitgave</h2>
-            <p>{{ detail.metadata.3.value }}</p>
+            <p>{% assign uitgave = detail.metadata | find: "field", "plaats_van_uitgave" %} {{ uitgave.value }}</p>
 
             <h2>UBN</h2>
-            <p>{{ detail.metadata.0.value }}</p>
+            <p>{% assign ubn = detail.metadata | find: "field", "uniek_boek_nummer" %} {{ ubn.value }}</p>
 
             <h2>trefwoorden</h2>
-            <p> {{ detail.metadata.6.value }}</p>
+            <p>{% assign trefwoorden = detail.metadata | find: "field", "keywords" %} {{ trefwoorden.value }}</p>
 
             <h2>signatuur</h2>
-            <p> {{ detail.metadata.5.value }}</p>
+            <p>{% assign signatuur = detail.metadata | find: "field", "signatuur" %} {{ signatuur.value }}</p>
 
             <h2>opmerkingen</h2>
-            <p> {{ detail.metadata.8.value }}</p>
+            <p>{% assign opmerkingen = detail.metadata | find: "field", "bijgebonden_in_bij" %} {{ opmerkingen.value }}</p>
 
-            <h2>kopieën</h2>
-            <p> {{ detail.metadata.9.value }}</p>
+            <h2>exemplaren</h2>
+            <p>{% assign exemplaren = detail.metadata | find: "field", "aantal_exemplaren" %} {{ exemplaren.value }}</p>
 
             <h2>BPH State Collection shelf mark</h2>
-            <p> {{ detail.metadata.11.value }}</p>
+            <p>{% assign bph = detail.metadata | find: "field", "breukleen_icn" %} {{ bph.value }}</p>
 
             <h2>status</h2>
-            <p> {{ detail.metadata.10.value }}</p>
+            <p>{% assign status = detail.metadata | find: "field", "status" %} {{ status.value }}</p>
         </section>
 
         <section class="detail-book-reaction">
