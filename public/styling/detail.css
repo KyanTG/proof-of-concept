@@ -5,6 +5,7 @@
 }
 
 .detail-page {
+    height: 100vh;
     position: relative;
 }
 
@@ -16,7 +17,7 @@
     background-color: var(--color-main);
     gap: 16px;
     width: 100%;
-    height: 48px;
+    height: 64px;
     padding-left: 16px;
 }
 
@@ -42,6 +43,7 @@
     color: var(--color-secondary);
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 .detail-book-info {
@@ -58,7 +60,7 @@
     top: 0;
     z-index: 10;
     margin-left: 16px;
-    margin-top: 64px;
+    margin-top: 80px;
 }
 
 .detail-book-info h1, .detail-book-reaction h1 {
@@ -98,7 +100,7 @@
     top: 0;
     z-index: 9;
     margin-left: 16px;
-    margin-top: 64px;
+    margin-top: 80px;
 }
 
 .detail-reactions.detail-reactions-open, .detail-info.detail-info-open {
@@ -128,16 +130,31 @@
 
 .book-carrousel {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .slider-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     margin-top: 48px;
-    width: 348px;
+    height: 17rem ;
+    width: 21rem ;
+
+}
+
+.slider-container img {
+    height: 100%;
+}
+
+.slider-container p {
+    font-family: var(--main-font);
+    color: var(--color-main);
+    font-size: var(--font-size-m);
+    position: absolute;
+    margin-top: 23rem;
 }
 
 @supports (scroll-snap-type: x mandatory) {
@@ -148,4 +165,30 @@
     .slider-container img {
         scroll-snap-align: center;
     }
+}
+
+.slider-container::scroll-button(*) {
+    border: 0;
+    font-size: 48px;
+    background: none;
+    color: var(--color-main);
+    cursor: pointer;
+    position: absolute;
+    top: 25rem;
+}
+
+.slider-container::scroll-button(left) {
+    content: "◄";
+    margin-right: 18rem;
+}
+
+.slider-container::scroll-button(right) {
+    content: "►";
+    margin-left: 18rem;
+    
+}
+
+.slider-container::scroll-button(*):focus {
+    outline: 2px solid var(--color-main);
+
 }
