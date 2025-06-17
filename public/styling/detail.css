@@ -127,6 +127,7 @@
     font-family: var(--main-font);
     font-size: var(--font-size-s);
     color: var(--color-main);
+    max-width: 400px;
 }
 
 .detail-book-info p, .detail-book-reaction input {
