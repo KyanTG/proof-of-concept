@@ -3,17 +3,11 @@
     <section class="detail-page">
 
         <nav class="detail-nav">
-            <ul>
-                <li>
-                    <a href="/">terug</a>
-                </li>
-                <li>
-                    <button class="detail-info">Info</button>
-                </li>
-                <li>
-                    <button class="detail-reactions">Reactie</button>
-                </li>
-            </ul>
+            <a href="/">terug</a>
+
+            <button class="detail-info">Info</button>
+
+            <button class="detail-reactions">Reactie</button>
         </nav>
 
         <section class="detail-book-info">
@@ -89,7 +83,7 @@
 // information 
 
 const infoButton = document.querySelector(".detail-info");
-const ReaButton = document.querySelector(".detail-reactions");
+const reaButton = document.querySelector(".detail-reactions");
 
 
 infoButton.addEventListener("click", openInfo);
@@ -99,21 +93,29 @@ function openInfo() {
 
   const infoNav = document.querySelector(".detail-book-info");
   const reaNav = document.querySelector(".detail-book-reaction");
+  const infoButton = document.querySelector(".detail-info");
+  const reaButton = document.querySelector(".detail-reactions");
 
   infoNav.classList.toggle("detail-book-info-open");
   reaNav.classList.remove("detail-book-reaction-open");
+  infoButton.classList.toggle("detail-info-open");
+  reaButton.classList.remove("detail-reactions-open");
 }
 
-ReaButton.addEventListener("click", openRea);
+reaButton.addEventListener("click", openRea);
 
 
 function openRea() {  
 
   const reaNav = document.querySelector(".detail-book-reaction");
   const infoNav = document.querySelector(".detail-book-info");
+  const infoButton = document.querySelector(".detail-info");
+  const reaButton = document.querySelector(".detail-reactions");
 
   reaNav.classList.toggle("detail-book-reaction-open");
   infoNav.classList.remove("detail-book-info-open");
+  reaButton.classList.toggle("detail-reactions-open");
+  infoButton.classList.remove("detail-info-open");
 }
 
 </script>
