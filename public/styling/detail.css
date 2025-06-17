@@ -19,9 +19,16 @@
     width: 100%;
     height: 64px;
     padding-left: 16px;
+
+    @media (min-width: 834px) {
+        height: 96px;
+    }
 }
 
 .detail-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--main-font);
     font-size: var(--font-size-xs);
     background: var(--color-secondary);
@@ -31,6 +38,21 @@
     padding-bottom: 6px;
     padding-top: 8px;
     padding-inline: 6px;
+
+    
+    @media (min-width: 834px) {
+        font-size: var(--font-size-s);
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-inline: 8px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: var(--font-size-m);
+        padding-top: 11px;
+        padding-bottom: 9px;
+        padding-inline: 10px;
+    }
 }
 
 .detail-info {
@@ -44,6 +66,31 @@
     border: none;
     background: none;
     cursor: pointer;
+
+    @media (min-width:834px) {
+        font-size: var(--font-size-m);
+    }
+
+    @media (min-width:1280px) {
+        font-size: var(--font-size-l);
+    }
+}
+
+.detail-nav button.detail-reactions-open, .detail-nav button.detail-info-open {
+    border: 2px solid var(--color-secondary);
+    padding-inline: 6px;
+    padding-block: 3px;
+    border-radius: 10px;
+
+    @media (min-width: 834px) {
+        padding-block: 5px;
+        padding-inline: 10px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-block: 6px;
+        padding-inline: 12px;
+    }
 }
 
 .detail-book-info {
@@ -55,12 +102,18 @@
     display: block;
     transform: translateY(0%);
     border: 2px solid var(--color-main);
+    border-radius: 10px;
     background: var(--color-white);
     position: absolute;
     top: 0;
     z-index: 10;
-    margin-left: 16px;
+    margin-inline: 16px;
     margin-top: 80px;
+    padding: 8px;
+
+    @media (min-width: 834px) {
+        margin-top: 112px;
+    }
 }
 
 .detail-book-info h1, .detail-book-reaction h1 {
@@ -76,10 +129,21 @@
     color: var(--color-main);
 }
 
-.detail-book-info p, .detail-book-reaction label, .detail-book-reaction input {
+.detail-book-info p, .detail-book-reaction input {
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     color: var(--color-main);
+}
+
+.detail-book-reaction label {
+    font-family: var(--main-font);
+    font-size: var(--font-size-s);
+    color: var(--color-main);
+    margin-bottom: 4px;
+}
+
+.detail-book-reaction input {
+    margin-bottom: 8px;
 }
 
 .detail-book-info p {
@@ -95,19 +159,18 @@
     display: block;
     transform: translateY(0%);
     border: 2px solid var(--color-main);
+    border-radius: 10px;
     background: var(--color-white);
     position: absolute;
     top: 0;
     z-index: 9;
-    margin-left: 16px;
+    margin-inline: 16px;
     margin-top: 80px;
-}
+    padding: 8px;
 
-.detail-reactions.detail-reactions-open, .detail-info.detail-info-open {
-    border: 2px solid var(--color-secondary);
-    padding-inline: 6px;
-    padding-block: 3px;
-    border-radius: 10px;
+    @media (min-width: 834px) {
+        margin-top: 112px;
+    }
 }
 
 .detail-book-reaction form {
@@ -137,24 +200,91 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-behavior: smooth;
+    max-height: 480px;
     margin-top: 48px;
-    height: 17rem ;
-    width: 21rem ;
+    width: 340px;
+
+    @media (min-width: 400px) {
+        width: 375px;
+    }
+
+    @media (min-width: 500px) {
+        width: 410px;
+    }
+
+    @media (min-width: 600px) {
+        width: 445px;
+    }
+
+    @media (min-width: 834px) {
+        width: 515px;
+    }
+
+    @media (min-width: 1080px) {
+        width: 595px;
+    }
+}
+
+.slider-container picture, .slider-container source, .slider-container img {
+    object-fit: contain;
+    width: max-content;
+    height: 260px;
+
+    @media (min-width: 400px) {
+        height: 290px;
+    }
+
+    @media (min-width: 500px) {
+        height: 320px;
+    }
+
+    @media (min-width: 600px) {
+        height: 350px;
+    }
+
+    @media (min-width: 834px) {
+        height: 410px;
+    }
+
+    @media (min-width: 1080px) {
+        height: 470px;
+    }
+
 
 }
 
-.slider-container img {
-    height: 100%;
-}
-
-.slider-container p {
+/* .slider-container p {
     font-family: var(--main-font);
     color: var(--color-main);
     font-size: var(--font-size-m);
-    position: absolute;
-    margin-left: 8.5rem;
-    margin-top: 23rem;
+    width: 200px;
+    position: absolute; 
+    left: 50%; 
+    margin-left: calc(-100px);
+
+    margin-top: 22rem;
+
+    @media (min-width: 400px) {
+        margin-top: 26rem ;
+    }
+
+    @media (min-width: 500px) {
+        width: 410px;
+    }
+
+    @media (min-width: 600px) {
+        width: 445px;
+    }
+
+    @media (min-width: 834px) {
+        width: 515px;
+    }
+
+    @media (min-width: 1080px) {
+        width: 595px;
+    }
 }
 
 @supports (scroll-snap-type: x mandatory) {
@@ -165,7 +295,7 @@
     .slider-container img {
         scroll-snap-align: center;
     }
-}
+} */
 
 .slider-container::scroll-button(*) {
     border: 0;
@@ -174,17 +304,74 @@
     color: var(--color-main);
     cursor: pointer;
     position: absolute;
-    top: 25rem;
+    top: 24rem;
+
+    @media (min-width: 400px) {
+        top: 26rem;
+    }
+
+    @media (min-width: 500px) {
+        top: 28rem;
+    }
+
+    @media (min-width: 600px) {
+        top: 30rem;
+    }
+
+    @media (min-width: 834px) {
+        top: 36rem;
+    }
+
+    @media (min-width: 1080px) {
+        top: 40rem;
+    }
 }
+
+.slider-container::scroll-button(*):hover {
+    scale: 1.2;
+}
+
 
 .slider-container::scroll-button(left) {
     content: "◄";
     margin-right: 18rem;
+
+    @media (min-width: 500px) {
+        margin-right: 23rem;
+    }
+
+    @media (min-width: 600px) {
+        margin-right: 25rem;
+    }
+
+    @media (min-width: 834px) {
+        margin-right: 29rem;
+    }
+
+    @media (min-width: 1080px) {
+        margin-right: 34rem;
+    }
 }
 
 .slider-container::scroll-button(right) {
     content: "►";
     margin-left: 18rem;
+
+    @media (min-width: 500px) {
+        margin-left: 23rem;
+    }
+
+    @media (min-width: 600px) {
+        margin-left: 25rem;
+    }
+
+    @media (min-width: 834px) {
+        margin-left: 29rem;
+    }
+
+    @media (min-width: 1080px) {
+        margin-left: 34rem;
+    }
     
 }
 

@@ -69,10 +69,13 @@
             <div class="slider-container">
                 {% for asset in detail.assets %}
 
-                    <img src="{{ asset.medium }}" class="slider-image" alt="Book Image">
+                    <picture>
+                        <source media="(min-width: 834px)" srcset="{{ asset.large }}">
+                        <img src="{{ asset.fluid }}" class="slider-image" alt="Book Image">
+                    </picture>
 
                 {% endfor %}
-                <p>scroll!</p>
+                {% comment %} <p>scroll!</p> {% endcomment %}
             </div>
         </section>
     </section>
