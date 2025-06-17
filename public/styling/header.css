@@ -160,6 +160,7 @@ header {
     display: block;
     background: var(--color-main);
     padding: 10px;
+    border-radius: 10px;
 }
 
 
