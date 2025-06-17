@@ -119,9 +119,6 @@ header {
     font-family: var(--main-font);
     font-size: var(--font-size-s);
     gap: 8px;
-}
-
-.header-nav button {
     background: var(--color-main);
     color: var(--color-secondary);
     border: none;
@@ -130,6 +127,20 @@ header {
     padding-inline: 10px;
     cursor: pointer;
     width: min-content;
+}
+
+.nav-phone-menu {
+    display: none;
+}
+
+.nav-phone-menu-open {
+    display: flex;
+    background: var(--color-main);
+    z-index: 10;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    padding-top: 48px;
 }
 
 .header-link {
