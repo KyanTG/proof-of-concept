@@ -253,7 +253,6 @@
     }
 }
 
-
 /* .slider-container p {
     font-family: var(--main-font);
     color: var(--color-main);
@@ -289,7 +288,7 @@
 @supports (scroll-snap-type: x mandatory) {
     .slider-container {
         scroll-snap-type: x mandatory;
-        gap: 100px;
+        gap: 500px;
     }
 
     .slider-container img {
