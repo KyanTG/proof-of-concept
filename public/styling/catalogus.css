@@ -69,11 +69,14 @@ select {
     flex-direction: column;
     gap: 32px;
 
-    @media (min-width: 834px) {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 600px);
-        justify-content: center;
-        align-items: flex-start;
+    @supports (grid-template-columns: repeat(auto-fit, 600px)) {
+
+        @media (min-width: 834px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 600px);
+            justify-content: center;
+            align-items: flex-start;
+        }
     }
 }
 
