@@ -79,6 +79,7 @@ header {
     margin-left: auto;
     margin-right: 16px;
     cursor: pointer;
+    z-index: 10;
 
     @media (min-width: 834px) {
         display: none;
@@ -136,11 +137,12 @@ header {
 .nav-phone-menu-open {
     display: flex;
     background: var(--color-main);
-    z-index: 10;
-    position: relative;
+    z-index: 9;
+    position: fixed;
     height: 300px;
     width: 100%;
-    padding-top: 48px;
+    top: 87px;
+    padding-top: 50px;
 }
 
 .header-link {
