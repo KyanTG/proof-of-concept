@@ -136,7 +136,6 @@
 .slider-container {
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow-x: scroll;
     scroll-behavior: smooth;
     margin-top: 48px;
@@ -154,6 +153,7 @@
     color: var(--color-main);
     font-size: var(--font-size-m);
     position: absolute;
+    margin-left: 8.5rem;
     margin-top: 23rem;
 }
 
