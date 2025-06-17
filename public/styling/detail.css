@@ -129,10 +129,23 @@
 .book-carrousel {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .slider-container {
     display: flex;
     align-items: center;
     overflow-x: scroll;
+    margin-top: 48px;
+    width: 348px;
+}
+
+@supports (scroll-snap-type: x mandatory) {
+    .slider-container {
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-container img {
+        scroll-snap-align: center;
+    }
 }
