@@ -11,14 +11,13 @@
 .detail-nav {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
-    padding-left: 8px;
-    padding-top: 24px;
+    align-items: center;
+    flex-direction: row;
     background-color: var(--color-main);
-    width: 70px;
-    height: 100vh;
+    gap: 16px;
+    width: 100%;
+    height: 48px;
+    padding-left: 16px;
 }
 
 .detail-nav a {
@@ -26,24 +25,23 @@
     font-size: var(--font-size-xs);
     background: var(--color-secondary);
     color: var(--color-main);
-    padding-bottom: 3px;
-    padding-top: 4px;
-    padding-inline: 6px;
     border-radius: 10px;
     text-decoration: none;
-}
-
-
-.detail-nav button {
-    border: none;
-    background: none;
-    font-family: var(--small-font);
-    font-size: var(--font-size-s);
-    color: var(--color-secondary);
+    padding-bottom: 6px;
+    padding-top: 8px;
+    padding-inline: 6px;
 }
 
 .detail-info {
-    margin-top: 40px;
+    margin-left: 24px;
+}
+
+.detail-nav button {
+    font-family: var(--small-font);
+    font-size: var(--font-size-s);
+    color: var(--color-secondary);
+    border: none;
+    background: none;
 }
 
 .detail-book-info {
@@ -54,11 +52,13 @@
 .detail-book-info-open {
     display: block;
     transform: translateY(0%);
-    margin-left: 86px;
-    margin-top: 100px;
+    border: 2px solid var(--color-main);
+    background: var(--color-white);
     position: absolute;
     top: 0;
     z-index: 10;
+    margin-left: 16px;
+    margin-top: 64px;
 }
 
 .detail-book-info h1, .detail-book-reaction h1 {
@@ -92,16 +92,17 @@
 .detail-book-reaction-open {
     display: block;
     transform: translateY(0%);
-    margin-left: 86px;
-    margin-top: 100px;
+    border: 2px solid var(--color-main);
+    background: var(--color-white);
     position: absolute;
     top: 0;
     z-index: 9;
+    margin-left: 16px;
+    margin-top: 64px;
 }
 
 .detail-reactions.detail-reactions-open, .detail-info.detail-info-open {
-    background: var(--color-secondary);
-    color: var(--color-main);
+    border: 2px solid var(--color-secondary);
     padding-inline: 6px;
     padding-block: 3px;
     border-radius: 10px;
@@ -117,10 +118,21 @@
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     background: var(--color-main);
+    color: var(--color-secondary);
     border: none;
     border-radius: 10px;
     padding-inline: 6px;
     padding-block: 3px;
-    color: var(--color-secondary);
     margin-top: 8px;
+}
+
+.book-carrousel {
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
 }
