@@ -89,6 +89,8 @@
 // information 
 
 const infoButton = document.querySelector(".detail-info");
+const ReaButton = document.querySelector(".detail-reactions");
+
 
 infoButton.addEventListener("click", openInfo);
 
@@ -96,21 +98,22 @@ infoButton.addEventListener("click", openInfo);
 function openInfo() {  
 
   const infoNav = document.querySelector(".detail-book-info");
+  const reaNav = document.querySelector(".detail-book-reaction");
 
-  infoNav.classList.toggle("detail-book-info-open");}
-
-
-// reaction 
-
-const ReaButton = document.querySelector(".detail-reactions");
+  infoNav.classList.toggle("detail-book-info-open");
+  reaNav.classList.remove("detail-book-reaction-open");
+}
 
 ReaButton.addEventListener("click", openRea);
 
 
 function openRea() {  
 
-  const ReaNav = document.querySelector(".detail-book-reaction");
+  const reaNav = document.querySelector(".detail-book-reaction");
+  const infoNav = document.querySelector(".detail-book-info");
 
-  ReaNav.classList.toggle("detail-book-reaction-open");}
+  reaNav.classList.toggle("detail-book-reaction-open");
+  infoNav.classList.remove("detail-book-info-open");
+}
 
 </script>
