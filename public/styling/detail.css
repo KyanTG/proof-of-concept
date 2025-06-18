@@ -105,14 +105,26 @@
     border-radius: 10px;
     background: var(--color-white);
     position: absolute;
+    width: 90%;
     top: 0;
     z-index: 10;
     margin-inline: 16px;
     margin-top: 80px;
     padding: 8px;
 
+    @media (min-width: 600px) {
+        width: 70%;
+    }
+
     @media (min-width: 834px) {
+        width: 50%;
         margin-top: 112px;
+        padding: 12px;
+    }
+
+    @media (min-width: 1080px) {
+        max-width: 600px;
+        padding: 16px;
     }
 }
 
@@ -120,31 +132,37 @@
     font-family: var(--main-font);
     font-size: var(--font-size-m);
     color: var(--color-main);
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
-.detail-book-info h2 {
+.detail-book-info h2, .detail-book-reaction label {
     font-family: var(--main-font);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
     color: var(--color-main);
-    max-width: 400px;
+    margin-bottom: 2px;
+
+    @media (min-width: 834px) {
+        font-size: var(--font-size-s);
+        margin-bottom: 3px;
+    }
+}
+
+.detail-book-info p {
+    margin-bottom: 4px;
+
+    @media (min-width: 834px) {
+        margin-bottom: 6px;
+    }
+
+    @media (min-width: 1080px) {
+        margin-bottom: 8px;
+    }
 }
 
 .detail-book-info p, .detail-book-reaction input {
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     color: var(--color-main);
-}
-
-.detail-book-reaction label {
-    font-family: var(--main-font);
-    font-size: var(--font-size-s);
-    color: var(--color-main);
-    margin-bottom: 4px;
-}
-
-.detail-book-reaction textarea {
-    margin-bottom: 8px;
 }
 
 .detail-book-reaction button {
@@ -173,14 +191,40 @@
     border-radius: 10px;
     background: var(--color-white);
     position: absolute;
+    width: 90%;
     top: 0;
     z-index: 9;
     margin-inline: 16px;
     margin-top: 80px;
     padding: 8px;
 
+    @media (min-width: 600px) {
+        width: 70%;
+    }
+
     @media (min-width: 834px) {
+        width: 50%;
         margin-top: 112px;
+        padding: 12px;
+    }
+
+    @media (min-width: 1080px) {
+        max-width: 600px;
+        padding: 16px;
+    }
+}
+
+.detail-book-reaction textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 16px;
+
+    @media (min-width: 834px) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 834px) {
+        margin-bottom: 24px;
     }
 }
 
@@ -188,18 +232,6 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-}
-
-.detail-book-reaction input[type="submit"] {
-    font-family: var(--small-font);
-    font-size: var(--font-size-s);
-    background: var(--color-main);
-    color: var(--color-secondary);
-    border: none;
-    border-radius: 10px;
-    padding-inline: 6px;
-    padding-block: 3px;
-    margin-top: 8px;
 }
 
 .book-carrousel {

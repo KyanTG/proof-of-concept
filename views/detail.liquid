@@ -55,7 +55,7 @@
             <form action="/detail/{{ detail.id }}" method="POST">
                 <label for="reactie">reactie</label>
                 <textarea name="reaction" placeholder="vul hier je reactie in"></textarea>
-                <input type="hidden" name="id" value="{{ detail.id }}">
+                <input type="hidden" name="bookid" value="{{ detail.id }}">
                 <button type="submit">reactie versturen</button>
             </form>
         </section>
