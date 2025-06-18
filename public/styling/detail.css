@@ -143,12 +143,22 @@
     margin-bottom: 4px;
 }
 
-.detail-book-reaction input {
+.detail-book-reaction textarea {
     margin-bottom: 8px;
 }
 
-.detail-book-info p {
-    margin-bottom: 8px;
+.detail-book-reaction button {
+    font-family: var(--main-font);
+    background: var(--color-main);
+    color: var(--color-secondary);
+    font-size: var(--font-size-s);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    padding-inline: 11px;
+    margin-left: auto;
 }
 
 .detail-book-reaction {

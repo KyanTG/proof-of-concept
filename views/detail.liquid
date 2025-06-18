@@ -54,9 +54,8 @@
 
             <form action="/detail/{{ detail.id }}" method="POST">
                 <label for="reactie">reactie</label>
-                {% comment %} <input type="textarea" placeholder="vul hier je reactie in"> {% endcomment %}
-                <textarea placeholder="vul hier je text in"></textarea>
-                <input type="hidden" name="reaction" value="{{ text }}">
+                <textarea name="reaction" placeholder="vul hier je reactie in"></textarea>
+                <input type="hidden" name="id" value="{{ detail.id }}">
                 <button type="submit">reactie versturen</button>
             </form>
         </section>
@@ -71,7 +70,6 @@
                     </picture>
 
                 {% endfor %}
-                {% comment %} <p>scroll!</p> {% endcomment %}
             </div>
         </section>
     </section>
