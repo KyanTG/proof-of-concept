@@ -52,18 +52,12 @@
         <section class="detail-book-reaction">
             <h1>Reacties</h1>
 
-            <form action="post">
-                <label for="name">naam</label>
-                <input type="text" placeholder="vul hier je naam in">
-
-                <label for="email">email</label>
-                <input type="email" placeholder="vul hier je email in">
-
+            <form action="/detail/{{ detail.id }}" method="POST">
                 <label for="reactie">reactie</label>
                 {% comment %} <input type="textarea" placeholder="vul hier je reactie in"> {% endcomment %}
                 <textarea placeholder="vul hier je text in"></textarea>
-
-                <input type="submit" placeholder="reactie versturen">
+                <input type="hidden" name="reaction" value="{{ text }}">
+                <button type="submit">reactie versturen</button>
             </form>
         </section>
 
