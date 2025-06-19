@@ -83,16 +83,33 @@ Zoals te zien is het enige verschil de grootte van het boek, deze heb ik ook nie
 
 ## Code gebruik
 
-### Data ophalen en verwerken zodat het zichtbaar is
+### Data ophalen en verwerken zodat het zichtbaar is met server.js
 
-Doormiddel van app.get met daarbinnen een fetch=("") is het mogelijk om JSON data op te halen uit een database, die kan je daarna met een response.render omzetten naar een werkende URL, dat ziet er zo uit voor de catalogus page en detail page. zoals te zien heb ik bij de detail page /detail/:id gedaan dit zorgt ervoor dat binnen de URL het boek met het juiste url word opgehaald en word gerenderd ( geladen )
+Doormiddel van app.get met daarbinnen een fetch=("") is het mogelijk om JSON data op te halen uit een database, die kan je daarna met een response.render omzetten naar een werkende URL, dat ziet er zo uit voor de catalogus page en detail page. zoals te zien heb ik bij de detail page /detail/:id gedaan dit zorgt ervoor dat binnen de URL het boek met het juiste url word opgehaald en word gerenderd ( geladen ). Doormiddel van in dit geval algemeen: catalogusPageJSON kunnen wij deze data laten zien op de pagina en deze stylen
 
 https://github.com/KyanTG/proof-of-concept/blob/c1084c43488baa58b4b2a459a91d749fb87f3caf/server.js#L16-L23
 https://github.com/KyanTG/proof-of-concept/blob/c1084c43488baa58b4b2a459a91d749fb87f3caf/server.js#L27-L38
 
 Ook is het mogelijk om een bericht achter te laten, dit is gedaan met een app.post op de detail pagina. Hierbinnen geef je de informatie mee over op welke database je de gegevens wilt opslaan en welke gegevens er opgeslagen worden, dit ziet er zo uit. Na het posten van een reactie blijf je op dezelfde pagina, maar je zou er ook voor kunnen kiezen om terug te gaan naar de homepage door de response.redirect te veranderen naar '/'
 
-https://github.com/KyanTG/proof-of-concept/blob/main/server.js#L41-L57
+https://github.com/KyanTG/proof-of-concept/blob/c1084c43488baa58b4b2a459a91d749fb87f3caf/server.js#L41-L57
+
+
+### Data laten zien op de website met liquid
+
+doormiddel van {% for %} kunnen wij een loop maken met alle opgevraagde data zodat je niet elk boek apart erin hoeft te zetten en te stylen, dit kan nu door 1 keer dit te doen waardoor dit dynamische code word, dit ziet er zo uit. Door bijvoorbeeld data.metadata.title te doen krijg je de title van elk boek tezien in een apart vak, dit werkt iets anders voor de jaartallen omdat wij hier eerst een {% assign %} moeten gebruiken zodat de juiste data opgehaald word, dit omdat de data in de database soms op verschillende plekken staat en je anders soms niet het jaar te zien krijgt maar bijvoorbeeld de auteur.
+
+https://github.com/KyanTG/proof-of-concept/blob/5f80e9a2c7f3acddca0db0c13bc2b14d18857ad0/views/catalogus.liquid#L30-L39
+
+
+Ook hebben wij voor het achterlaten van een reactie de formtag nodig, hiermee kan je de method post aan megeven waardoor de site weet als je hierop klikt dat er iets gepost moet worden. Om dit compleet te maken heb je ook nog een type submit nodig zodat dit ook echt verwerkt wordt, dit ziet er dan ongeveer zo uit in code, met de data-enhanced zou je ervoor kunnen kiezen om bijvoorbeeld een custom loader te maken zodra de data wordt verzonden. Om dit te laten werken heb je een stuk client-side javascript nodig die ervoor zorgt dat de default loader wordt uitgezet in de site.
+
+https://github.com/KyanTG/proof-of-concept/blob/5f80e9a2c7f3acddca0db0c13bc2b14d18857ad0/views/detail.liquid#L55-L64
+https://github.com/KyanTG/proof-of-concept/blob/5f80e9a2c7f3acddca0db0c13bc2b14d18857ad0/views/detail.liquid#L129-L176
+
+### De styling van de website en de boeken met CSS
+
+
 
 
 
