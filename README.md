@@ -33,8 +33,9 @@ Zoals u kunt zien is alle informatie duidelijk zichtbaar op mobiel, Ook heb ik e
 ### Website op Tablet ( ipad air )
 
 <img width="530" alt="Screenshot 2025-06-19 at 12 37 45" src="https://github.com/user-attachments/assets/93240d5d-67a8-4016-8537-2f8db78f1c85" />
+<img width="1043" alt="Screenshot 2025-06-19 at 13 00 12" src="https://github.com/user-attachments/assets/03afb7f4-625f-466d-a554-b3690ee1a6d3" />
 
-Ik heb het design op de tablet hetzelfde gehouden als op mobiel, het enige verschil is dat de button er beter uitziet doordat er wat meer ruimte is binnen het boek.
+Ik heb het design op de tablet hetzelfde gehouden als op mobiel, het enige verschil is dat de button er beter uitziet doordat er wat meer ruimte is binnen het boek. Als je je scherm draait van de ipad krijg je dezelfde indeling te zien las op desktop.
 
 ### Website op Desktop ( Macbook pro 14inch )
 
@@ -43,6 +44,42 @@ Ik heb het design op de tablet hetzelfde gehouden als op mobiel, het enige versc
 <img width="1512" alt="Screenshot 2025-06-19 at 12 42 44" src="https://github.com/user-attachments/assets/747570b1-ed76-45ab-ac6d-007701cfc092" />
 
 Op de desktop versie is er een ander navigatie menu te zien, dit heb ik gedaan omdat er op desktop hier genoeg ruimte voor is en dit mooier / makkelijker functioneert dan een hamburger menu. ( die te zien is op telefoon en tablet variant ). 
+
+## Detail Page
+
+Dit is de pagina waar je komt na het klikken van de knop boek bekijken, hier kan je informatie zien over het boek, een reactie achterlaten over het boek of het boek doorbladeren doormiddel van buttons of door te scrollen.
+
+### Ontwerpkeuzes
+
+Ik heb ervoor gekozen om de informatie en reacties over het boek te verstoppen, deze krijg je alleen te zien bij het klikken van de knoppen in de navigatie genaamd info en reactie. Ik heb hiervoor gekozen omdat het anders een drukke pagina wordt en tijdens dat je het boek aan doorbladeren bent wil je niet afgeleid worden door andere informatie. Ook heb ik ervoor gekozen om het boek voor desktop niet al te groot te maken omdat dit ervoor kan zorgen dat het onprettig te lezen wordt. Ook valt er op desktop makkelijk door alles heen te tabben voor gebruikers zonder muis waardoor deze hele pagina te bedienen is zonder muis!
+
+
+
+https://github.com/user-attachments/assets/c1af09dd-c2fa-4dc4-86d2-6f48722afb94
+
+
+
+### Website op Mobiel ( iphone 12 pro )
+
+<img width="357" alt="Screenshot 2025-06-19 at 12 53 54" src="https://github.com/user-attachments/assets/a4398333-64be-4991-bdc6-ff3c4c2509e5" />
+<img width="357" alt="Screenshot 2025-06-19 at 12 54 04" src="https://github.com/user-attachments/assets/78913520-026a-4cce-9c42-0573251db172" />
+<img width="357" alt="Screenshot 2025-06-19 at 12 54 15" src="https://github.com/user-attachments/assets/f312004b-1036-4813-801a-ca9fc28241ff" />
+
+Zoals te zien is alles goed op de mobiel, de navigatie is makkelijk en duidelijk te beheren en het boekt valt goed te lezen zonder dat er elementen niet te zien zijn.
+
+
+### Website op Tablet ( ipad air )
+
+<img width="1006" alt="Screenshot 2025-06-19 at 12 57 55" src="https://github.com/user-attachments/assets/6518a182-a9dd-4117-a63d-22a8aaf39eb8" />
+<img width="537" alt="Screenshot 2025-06-19 at 12 58 14" src="https://github.com/user-attachments/assets/1fc4d2b2-8b8c-479b-bec8-ecc1578b7b2b" />
+
+Zoals te zien is de website ook goed functioneel op tablet, ongeacht of je je scherm draait of niet.
+
+### Website op Desktop ( Macbook pro 14inch )
+
+<img width="1503" alt="Screenshot 2025-06-19 at 12 59 12" src="https://github.com/user-attachments/assets/b61e35d6-332e-42f9-b2bc-d159ebe0db1c" />
+
+Zoals te zien is het enige verschil de grootte van het boek, deze heb ik ook niet zo groot gemaakt als in verglijking op de tablet of telefoon omdat het anders het hele scherm in beslag neemt en dat geeft geen fijn leesgevoel en weinig witruimte voor rust
   
 ## Licentie
 
