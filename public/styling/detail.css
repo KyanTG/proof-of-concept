@@ -192,6 +192,8 @@
     background: var(--color-white);
     position: absolute;
     width: 90%;
+    max-height: 500px;
+    overflow-y: scroll;
     top: 0;
     z-index: 9;
     margin-inline: 16px;
@@ -234,8 +236,17 @@
     flex-direction: column;
 }
 
-.detail-book-reaction p {
-    font-size: 20px;
+.people-reactions {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid var(--color-main);
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.people-reactions:nth-of-type(1) {
+    margin-top: 24px;
 }
 
 .book-carrousel {

@@ -35,7 +35,6 @@ app.get('/detail/:id', async function (request, response) {
     const detailPageJSON = await detailPage.json();
 
     response.render('detail.liquid', { detail: detailPageJSON, id, reactions: postReactionJSON.data });
-
 });
 
 
@@ -54,7 +53,7 @@ app.post('/detail/:id', async function (request, response) {
        }),
     })
     //   console.log(reactionSend)
-      response.redirect(303, '/detail/' + id)
+    response.redirect(303, '/detail/' + id)
 })
 
 

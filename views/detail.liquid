@@ -60,7 +60,9 @@
             </form>
 
             {% for reaction in reactions %}
-                <p>{{ reaction.text }}</p>
+                <div class="people-reactions">
+                    <p>{{ reaction.text }}</p>
+                </div>
             {% endfor %}
         </section>
 
