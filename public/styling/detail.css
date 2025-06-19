@@ -168,7 +168,7 @@ a:hover, button:hover, select:hover {
     }
 }
 
-.detail-book-info p, .detail-book-reaction input {
+.detail-book-info p, .detail-book-reaction input, .detail-book-reaction p {
     font-family: var(--small-font);
     font-size: var(--font-size-s);
     color: var(--color-main);
@@ -254,7 +254,7 @@ a:hover, button:hover, select:hover {
     width: fit-content;
     border-radius: 10px;
     border: 2px solid var(--color-main);
-    padding: 12px;
+    padding: 8px;
     margin-top: 8px;
 }
 
