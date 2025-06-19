@@ -80,7 +80,22 @@ Zoals te zien is de website ook goed functioneel op tablet, ongeacht of je je sc
 <img width="1503" alt="Screenshot 2025-06-19 at 12 59 12" src="https://github.com/user-attachments/assets/b61e35d6-332e-42f9-b2bc-d159ebe0db1c" />
 
 Zoals te zien is het enige verschil de grootte van het boek, deze heb ik ook niet zo groot gemaakt als in verglijking op de tablet of telefoon omdat het anders het hele scherm in beslag neemt en dat geeft geen fijn leesgevoel en weinig witruimte voor rust
-  
+
+## Code gebruik
+
+### Data ophalen en verwerken zodat het zichtbaar is
+
+Doormiddel van app.get met daarbinnen een fetch=("") is het mogelijk om JSON data op te halen uit een database, die kan je daarna met een response.render omzetten naar een werkende URL, dat ziet er zo uit voor de catalogus page en detail page. zoals te zien heb ik bij de detail page /detail/:id gedaan dit zorgt ervoor dat binnen de URL het boek met het juiste url word opgehaald en word gerenderd ( geladen )
+
+https://github.com/KyanTG/proof-of-concept/blob/c1084c43488baa58b4b2a459a91d749fb87f3caf/server.js#L16-L23
+https://github.com/KyanTG/proof-of-concept/blob/c1084c43488baa58b4b2a459a91d749fb87f3caf/server.js#L27-L38
+
+Ook is het mogelijk om een bericht achter te laten, dit is gedaan met een app.post op de detail pagina. Hierbinnen geef je de informatie mee over op welke database je de gegevens wilt opslaan en welke gegevens er opgeslagen worden, dit ziet er zo uit. Na het posten van een reactie blijf je op dezelfde pagina, maar je zou er ook voor kunnen kiezen om terug te gaan naar de homepage door de response.redirect te veranderen naar '/'
+
+https://github.com/KyanTG/proof-of-concept/blob/main/server.js#L41-L57
+
+
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
