@@ -179,3 +179,7 @@ select {
         font-size: var(--font-size-m);
     }
 }
+
+.book-info.hide {
+    display: none;
+}
