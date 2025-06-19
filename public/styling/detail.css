@@ -135,7 +135,7 @@
     margin-bottom: 12px;
 }
 
-.detail-book-info h2, .detail-book-reaction label {
+.detail-book-info h2, .detail-book-reaction label { 
     font-family: var(--main-font);
     font-size: var(--font-size-xs);
     color: var(--color-main);
@@ -234,6 +234,10 @@
     flex-direction: column;
 }
 
+.detail-book-reaction p {
+    font-size: 20px;
+}
+
 .book-carrousel {
     display: flex;
     justify-content: center;
@@ -247,7 +251,7 @@
     scroll-behavior: smooth;
     max-height: 480px;
     margin-top: 48px;
-    width: 340px;
+    width: 320px;
 
     @media (min-width: 400px) {
         width: 375px;
@@ -270,10 +274,26 @@
     }
 }
 
+.slider-container {
+    scrollbar-color: var(--color-main);
+}
+
+.slider-container::-webkit-scrollbar {
+    height: 10px;
+    background: var(--color-main);
+    border-radius: 10px;
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 100px;
+}
+
 .slider-container picture, .slider-container source, .slider-container img {
     object-fit: contain;
     width: min-content;
     height: 200px;
+    margin-bottom: 16px;
 
     @media (min-width: 400px) {
         height: 220px;
@@ -317,23 +337,23 @@
     top: 22rem;
 
     @media (min-width: 400px) {
-        top: 24rem;
+        top: 23rem;
     }
 
     @media (min-width: 500px) {
-        top: 26rem;
+        top: 24.5rem;
     }
 
     @media (min-width: 600px) {
-        top: 28rem;
+        top: 25.5rem;
     }
 
     @media (min-width: 834px) {
-        top: 34rem;
+        top: 30rem;
     }
 
     @media (min-width: 1080px) {
-        top: 38rem;
+        top: 32rem;
     }
 }
 
@@ -344,7 +364,11 @@
 
 .slider-container::scroll-button(left) {
     content: "◄";
-    margin-right: 18rem;
+    margin-right: 17rem;
+
+    @media (min-width: 400px) {
+        margin-right: 20rem;
+    }
 
     @media (min-width: 500px) {
         margin-right: 23rem;
@@ -365,7 +389,11 @@
 
 .slider-container::scroll-button(right) {
     content: "►";
-    margin-left: 18rem;
+    margin-left: 17rem;
+
+    @media (min-width: 400px) {
+        margin-left: 20rem;
+    }
 
     @media (min-width: 500px) {
         margin-left: 23rem;
@@ -382,8 +410,4 @@
     @media (min-width: 1080px) {
         margin-left: 34rem;
     } 
-}
-
-.slider-container::scroll-button(*):focus {
-    outline: 2px solid var(--color-main);
 }

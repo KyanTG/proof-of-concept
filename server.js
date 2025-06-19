@@ -25,22 +25,21 @@ response.render('catalogus.liquid', { algemeen: catalogusPageJSON });
 
 
 app.get('/detail/:id', async function (request, response) {
-    
 
-    const catalogusPage = await fetch('https://efm-student-case-proxy-api.vercel.app/overview');
-    const catalogusPageJSON = await catalogusPage.json(); 
+    const id = request.params.id
 
-    const detailPage = await fetch('https://efm-student-case-proxy-api.vercel.app/detail/' + request.params.id);
+    const postReaction = await fetch (`https://fdnd.directus.app/items/messages?filter[from][_eq]=kyanIOD1&filter[for][_eq]=${id}`);
+    const postReactionJSON = await postReaction.json();
+
+    const detailPage = await fetch(`https://efm-student-case-proxy-api.vercel.app/detail/${id}`);
     const detailPageJSON = await detailPage.json();
 
-    response.render('detail.liquid', { detail: detailPageJSON, algemeen: catalogusPageJSON, id: request.params.id });
+    response.render('detail.liquid', { detail: detailPageJSON, id, reactions: postReactionJSON.data });
 
 });
 
 
 app.post('/detail/:id', async function (request, response) {
-
-    //console.log(request.body) dit is om te checken of het werkt
 
     const id = request.params.id
     const reactionSend = await fetch('https://fdnd.directus.app/items/messages', {
@@ -49,12 +48,12 @@ app.post('/detail/:id', async function (request, response) {
         'Content-Type': 'application/json;charset=UTF-8'
       },
       body: JSON.stringify({
-        from: "kyanIOD",                  
+        from: "kyanIOD1",                  
         text: request.body.reaction,
         for: id
        }),
     })
-      console.log(reactionSend)
+    //   console.log(reactionSend)
       response.redirect(303, '/detail/' + id)
 })
 
