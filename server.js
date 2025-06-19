@@ -28,7 +28,7 @@ app.get('/detail/:id', async function (request, response) {
 
     const id = request.params.id
 
-    const postReaction = await fetch (`https://fdnd.directus.app/items/messages?filter[from][_eq]=kyanIOD1&filter[for][_eq]=${id}`);
+    const postReaction = await fetch (`https://fdnd.directus.app/items/messages?filter[from][_eq]=kyanIOD2&filter[for][_eq]=${id}`);
     const postReactionJSON = await postReaction.json();
 
     const detailPage = await fetch(`https://efm-student-case-proxy-api.vercel.app/detail/${id}`);
@@ -47,7 +47,7 @@ app.post('/detail/:id', async function (request, response) {
         'Content-Type': 'application/json;charset=UTF-8'
       },
       body: JSON.stringify({
-        from: "kyanIOD1",                  
+        from: "kyanIOD2",                  
         text: request.body.reaction,
         for: id
        }),

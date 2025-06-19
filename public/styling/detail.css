@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a:hover, button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .detail-page {
     height: 100vh;
     position: relative;
