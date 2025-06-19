@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-a:hover, button:hover {
+a:hover, button:hover, select:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
