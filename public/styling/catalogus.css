@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 .content {
     margin-inline: 16px;
 }
@@ -42,10 +46,6 @@
     margin-left: 10px;
     height: 25px;
     cursor: pointer;
-}
-
-.range-slider {
-    display: none;
 }
 
 select {
@@ -178,8 +178,4 @@ select {
     @media (min-width: 1280px) {
         font-size: var(--font-size-m);
     }
-}
-
-.book-info.hide {
-    display: none;
 }

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 a:hover, button:hover, select:hover {
     text-decoration: underline;
     text-underline-offset: 3px;

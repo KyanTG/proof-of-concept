@@ -34,7 +34,6 @@
             <p class="book-publisher">Auteur {% assign auteur = data.metadata | find: "field", "auteur" %} {{ auteur.value }}</p>
             <p class="book-year">Jaar {% assign jaar =  data.metadata | find: "field", "jaar" %} {{ jaar.value }}</p>
             <p class="book-place">Plaats {% assign plaats = data.metadata | find: "field", "plaats_van_uitgave" %} {{ plaats.value }}</p>
-            {% comment %} <p>debug {{ data.id }}</p> {% endcomment %}
             <a href="/detail/{{ data.id }}" class="book-details">boek bekijken</a>        
         </article>
     {% endfor %}
