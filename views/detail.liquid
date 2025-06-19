@@ -52,11 +52,15 @@
         <section class="detail-book-reaction">
             <h1>Reacties</h1>
 
-            <form action="/detail/{{ detail.id }}" method="POST">
+            <form action="/detail/{{ detail.id }}" method="POST" data-enhanced="form-{{ detail.id }}">
                 <label for="reactie">reactie</label>
                 <textarea name="reaction" placeholder="vul hier je reactie in"></textarea>
                 <input type="hidden" name="bookid" value="{{ detail.id }}">
-                <button type="submit">reactie versturen</button>
+                <button class="reaction-submit" type="submit">reactie versturen</button>
+
+                <svg viewbox="0 0 100 100">
+                    <circle cx="50" cy="50" r="25"></circle>
+                </svg>
             </form>
 
             {% for reaction in reactions %}
@@ -119,5 +123,54 @@ function openRea() {
   reaButton.classList.toggle("detail-reactions-open");
   infoButton.classList.remove("detail-info-open");
 }
+
+</script>
+
+<script type="module">
+
+    document.addEventListener('submit', async function(event) {
+
+    const form = event.target
+
+    if (!form.hasAttribute('data-enhanced')) {
+     return
+    }
+
+    // default weghalen en loading state toegevoegd
+
+    event.preventDefault()
+
+    form.classList.add('reaction-loading')
+
+
+
+    let formData = new FormData(form)
+
+    if (event.submitter) {
+        formData.append(event.submitter.name, event.submitter.value)
+    }
+
+    const response = await fetch (form.action, {
+    method: form.method,
+    body: new URLSearchParams(formData)
+    })
+
+    const responseText = await response.text()
+
+    const parser = new DOMParser()
+    const responseDOM = parser.parseFromString(responseText, 'text/html')
+
+    const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]')
+
+    // laoding state remove
+    form.classList.remove('reaction-loading')
+
+    // succes state
+    if (form.action.includes("{{ detail.id }}")) {
+        newState.classList.add('reaction-succes')
+    }
+
+    form.outerHTML = newState.outerHTML
+})
 
 </script>

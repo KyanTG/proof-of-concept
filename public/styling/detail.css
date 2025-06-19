@@ -165,7 +165,7 @@
     color: var(--color-main);
 }
 
-.detail-book-reaction button {
+.detail-book-reaction .reaction-submit {
     font-family: var(--main-font);
     background: var(--color-main);
     color: var(--color-secondary);
@@ -178,6 +178,10 @@
     padding-inline: 11px;
     margin-left: auto;
 }
+
+/* .reaction-submit svg {
+    display: none;
+} */
 
 .detail-book-reaction {
     display: none;
@@ -421,4 +425,56 @@
     @media (min-width: 1080px) {
         margin-left: 34rem;
     } 
+}
+
+.reaction-loading button {
+    display: none;
+}
+
+form svg, form circle {
+    display: none;
+}
+
+.reaction-loading svg {
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin-left: auto;
+    animation: rotate 1.5s linear infinite;
+}
+
+.reaction-loading circle {
+    display: block;
+    animation: dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 8;
+    stroke: var(--color-main);
+    z-index: 10;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
 }
