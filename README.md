@@ -117,6 +117,14 @@ https://github.com/KyanTG/proof-of-concept/blob/610abd9f060d31d79fc316c0e9ea6cf8
 
 ## Installatie 
 
+## Installatie
+Clone de repo lokaal, in de terminal van je code editor moeten de volgende commands uitgevoerd worden:
+
+* npm install
+* npm install node-fetch express-session
+* npm start
+
+Vervolgens kan er via de localhost een live sessie gestart worden.
 
 
 ## Licentie
