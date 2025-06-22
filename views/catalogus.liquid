@@ -53,11 +53,27 @@ search.addEventListener('input', searchTable);
 function searchTable() {
     bookRows.forEach( (row, i) => {
         let bookData = row.textContent.toLocaleLowerCase(),
-            searchData = search.value.toLocaleLowerCase();
+        searchData = search.value.toLocaleLowerCase();
 
-            row.classList.toggle('hide',bookData.indexOf(searchData) < 0); 
+        row.classList.toggle('hide',bookData.indexOf(searchData) < 0); 
     } 
 )};
+
+
+
+    const bookButtons = document.querySelectorAll('.book-details');
+
+    bookButtons.forEach(button => {
+
+    button.addEventListener('mouseover', () => {
+        button.textContent = 'klik mij!'; 
+    });
+
+    button.addEventListener('mouseout', () => {
+        button.textContent = 'boek bekijken'; 
+    });
+});
+
 </script>
 </body>
 </html>
