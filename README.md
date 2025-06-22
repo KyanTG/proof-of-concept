@@ -110,6 +110,12 @@ https://github.com/KyanTG/proof-of-concept/blob/5f80e9a2c7f3acddca0db0c13bc2b14d
 ### De styling van de website en de boeken met CSS
 
 
+omdat de boeken zijn gemaakt met een {% for %} hoeven wij ook maar 1x styling mee te geven voor de boeken, de website zelf heeft wel verschillende styling omdat de website er verschillend uit moet zien op verschillende groottes, dit kan je doen door media-queries te gebruiken en dat ziet er dan zo uit.
+
+https://github.com/KyanTG/proof-of-concept/blob/610abd9f060d31d79fc316c0e9ea6cf8a9dcc7ce/public/styling/catalogus.css#L67-L82
+https://github.com/KyanTG/proof-of-concept/blob/610abd9f060d31d79fc316c0e9ea6cf8a9dcc7ce/public/styling/catalogus.css#L84-L181
+
+## Installatie 
 
 
 
