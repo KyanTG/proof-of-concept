@@ -13,13 +13,26 @@ app.use(express.urlencoded({extended: true}))
 
 
 // or app.get('/catalogus') when there is a homepage
-app.get('/', async function (request, response) {    
+app.get('/', async function (request, response) {
 
 const catalogusPage = await fetch('https://efm-student-case-proxy-api.vercel.app/overview');
 const catalogusPageJSON = await catalogusPage.json();
 
+const search = request.query.search || '';
+let filtered = catalogusPageJSON;
 
-response.render('catalogus.liquid', { algemeen: catalogusPageJSON });
+if (search) {
+    const term = search.toLowerCase();
+    filtered = catalogusPageJSON.filter(item => {
+        const title = (item.title || '').toLowerCase();
+        const auteur = (item.metadata?.find(m => m.field === 'auteur')?.value || '').toLowerCase();
+        const jaar = (item.metadata?.find(m => m.field === 'jaar')?.value || '').toLowerCase();
+        const plaats = (item.metadata?.find(m => m.field === 'plaats_van_uitgave')?.value || '').toLowerCase();
+        return title.includes(term) || auteur.includes(term) || jaar.includes(term) || plaats.includes(term);
+    });
+}
+
+response.render('catalogus.liquid', { algemeen: filtered, search });
 });
 
 

@@ -5,9 +5,10 @@
 <section class="content">
 <section class="filter-navigation">
 
-    <div class="search-bar">
-        <input type="search" class="search-input" name="search" placeholder="zoek hier..." minlength="1400" maxlength="2100">
-    </div>
+    <form class="search-bar" method="get" action="/">
+        <input type="search" class="search-input" name="search" placeholder="zoek hier..." value="{{ search }}" minlength="1" maxlength="2100">
+        <button type="submit">Zoeken</button>
+    </form>
 
     {% comment %} <select class="auteur">
         <option value="auteur">auteur</option>
@@ -44,33 +45,33 @@
 {% render 'partials/footer.liquid' %}
 
 <script>
-    
-const search = document.querySelector('.search-input'),
-bookRows = document.querySelectorAll('.book-info');
+
+const searchForm = document.querySelector('.search-bar');
+const search = document.querySelector('.search-input');
+const bookRows = document.querySelectorAll('.book-info');
+
+searchForm.addEventListener('submit', (e) => e.preventDefault());
 
 search.addEventListener('input', searchTable);
 
 function searchTable() {
-    bookRows.forEach( (row, i) => {
+    bookRows.forEach((row) => {
         let bookData = row.textContent.toLocaleLowerCase(),
         searchData = search.value.toLocaleLowerCase();
 
-        row.classList.toggle('hide',bookData.indexOf(searchData) < 0); 
-    } 
-)};
+        row.classList.toggle('hide', bookData.indexOf(searchData) < 0);
+    });
+}
 
+const bookButtons = document.querySelectorAll('.book-details');
 
-
-    const bookButtons = document.querySelectorAll('.book-details');
-
-    bookButtons.forEach(button => {
-
+bookButtons.forEach(button => {
     button.addEventListener('mouseover', () => {
-        button.textContent = 'klik mij!'; 
+        button.textContent = 'klik mij!';
     });
 
     button.addEventListener('mouseout', () => {
-        button.textContent = 'boek bekijken'; 
+        button.textContent = 'boek bekijken';
     });
 });
 
