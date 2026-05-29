@@ -24,11 +24,12 @@ let filtered = catalogusPageJSON;
 if (search) {
     const term = search.toLowerCase();
     filtered = catalogusPageJSON.filter(item => {
-        const title = (item.title || '').toLowerCase();
-        const auteur = (item.metadata?.find(m => m.field === 'auteur')?.value || '').toLowerCase();
-        const jaar = (item.metadata?.find(m => m.field === 'jaar')?.value || '').toLowerCase();
-        const plaats = (item.metadata?.find(m => m.field === 'plaats_van_uitgave')?.value || '').toLowerCase();
-        return title.includes(term) || auteur.includes(term) || jaar.includes(term) || plaats.includes(term);
+        const valuesToSearch = [item.title, item.description, ...(item.metadata || []).map(m => m.value)];
+        return valuesToSearch.some(value =>
+            Array.isArray(value)
+                ? value.some(v => typeof v === 'string' && v.toLowerCase().includes(term))
+                : typeof value === 'string' && value.toLowerCase().includes(term)
+        );
     });
 }
 
